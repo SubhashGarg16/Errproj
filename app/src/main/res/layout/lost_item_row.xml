@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:padding="10dp"
+            android:id="@+id/img1">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv1"
+            android:text="pet Name"
+            android:fontFamily="@font/assistant"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/img1"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv2"
+            android:text="Date of Lost"
+            android:fontFamily="@font/assistant"
+            android:layout_toRightOf="@id/img1"
+            android:layout_below="@id/tv1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#061B9A"
+            android:textSize="17dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv3"
+            android:text="breed Name"
+            android:fontFamily="@font/assistant"
+            android:layout_toRightOf="@id/img1"
+            android:layout_below="@id/tv2"
+            android:layout_marginLeft="10dp"
+            android:textColor="#061B9A"
+            android:textSize="17dp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

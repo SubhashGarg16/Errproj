@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="eu.welfare.newneeds.ui.auth.AuthViewModel" />
+        
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9fbf9"
+        tools:context=".ui.auth.LoginActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/image_view_logo"
+                android:layout_width="27dp"
+                android:layout_height="39dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/ic_app_logo" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_view_logo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Meet your daily needs"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#465A61"
+                    app:fontFamily="cursive" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Daily Needs"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#008B00"
+                    app:fontFamily="cursive"
+                    android:typeface="monospace"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout1"
+                android:background="#f6fef6"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <EditText
+                    android:id="@+id/edit_text_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@={viewmodel.email}"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/edit_text_round_gray_background"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="16dp"
+                    android:hint="yourName@abc.com"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp" />
+
+                <EditText
+                    android:id="@+id/edit_text_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@={viewmodel.password}"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/edit_text_round_gray_background"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:drawablePadding="16dp"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:padding="12dp" />
+
+                <TextView
+                    android:id="@+id/text_view_forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="cursive"
+                    android:text="Forget Password?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/teal_700" />
+
+                <Button
+                    android:id="@+id/button_sign_in"
+                    android:layout_width="150dp"
+                    android:onClick="@{viewmodel::onLoginButtonClick}"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Sign In"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/acme"
+                android:gravity="center_horizontal"
+                android:onClick="@{viewmodel::onSignup}"
+                android:text="Don't have an account?\nSign Up Here"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:visibility="invisible" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
+
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LostandFound.LostFoundActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taablayout"
+        android:background="@color/light_blue"
+        app:tabTextColor="@color/black"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lost_tab"
+            android:text="Lost" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/found_tab"
+            android:text="Found" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            app:fab_addButtonColorNormal="@color/light_blue"
+            app:fab_addButtonColorPressed="@color/white"
+            app:fab_labelStyle="@style/costomstyle">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_title="LOST"
+                app:fab_icon="@drawable/lost"
+                app:fab_size="normal"
+                app:fab_colorNormal="@color/light_blue"
+                app:fab_colorPressed="@color/black"
+                android:id="@+id/btn_go_lost">
+
+            </com.getbase.floatingactionbutton.FloatingActionButton>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_title="FOUND"
+                app:fab_icon="@drawable/found"
+                app:fab_size="normal"
+                app:fab_colorNormal="@color/light_blue"
+                app:fab_colorPressed="@color/black"
+                android:id="@+id/btn_go_found">
+
+            </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+
+</LinearLayout>

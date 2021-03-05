@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LostandFound.LostActivity"
+    android:orientation="vertical">
+
+    <!--<data>
+        <variable
+            name="viewmodel"
+            type="eu.welfare.newneeds.ui.LostandFound.AnimalViewModel" />
+
+    </data>-->
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Have you lost someone"
+        android:fontFamily="cursive"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:background="@color/light_blue"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+
+    </TextView>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/text_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant"
+            android:text="Last Known Location of Pet"
+            android:textColor="@color/black"
+            android:textSize="17dp"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_edit_location_24"
+            android:layout_marginLeft="40dp">
+
+        </ImageView>
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write Place"
+        android:textSize="17dp"
+        android:fontFamily="@font/assistant"
+        android:textColor="@color/black"
+        android:id="@+id/edit_text1"
+        android:text="@={viewmodel.name}"
+        android:gravity="center">
+    </EditText>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="when it went missing"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:fontFamily="@font/assistant">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slect Date"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:fontFamily="@font/assistant"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/text_view_date"
+            android:background="#AEAEAE"
+            android:fadingEdge="vertical">
+
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/YYYY"
+            android:textColor="@color/black"
+            android:fontFamily="@font/assistant"
+            android:textSize="17dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/date_et"
+            android:shadowColor="@color/Light_Green"
+            android:text="@={viewmodel.name}"
+            >
+
+        </EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:outlineProvider="background"
+        android:backgroundTint="#DBDFE1"
+        android:background="#CFD1D3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breed  "
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:fontFamily="@font/assistant"
+            android:id="@+id/text_view2">
+
+        </TextView>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Breed_spinner"
+            android:requiresFadingEdge="vertical"
+            android:tooltipText="17dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+        </Spinner>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:fontFamily="@font/assistant"
+        android:gravity="center"
+        android:hint="Pet Nme"
+        android:text="@={viewmodel.petname}">
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Gender"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/assistant"
+            android:gravity="center"
+            android:layout_marginRight="50dp">
+
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Gender_Radiogrp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/light_blue"
+                android:text="Male"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:fontFamily="@font/assistant"
+                android:id="@+id/Gender_radioBtn1">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/light_blue"
+                android:layout_marginLeft="10dp"
+                android:text="Female"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:fontFamily="@font/assistant"
+                android:id="@+id/Gender_radioBtn2">
+
+            </RadioButton>
+
+        </RadioGroup>
+
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Color"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/assistant"
+        android:gravity="center_horizontal"
+        android:text="@={viewmodel.color}">
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Size  "
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/assistant"
+            android:gravity="center"
+            android:layout_marginRight="20dp">
+
+
+
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Size_Radiogrp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/light_blue"
+                android:text="Small"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:fontFamily="@font/assistant"
+                android:id="@+id/Size_radioBtn1">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/light_blue"
+                android:layout_marginLeft="5dp"
+                android:text="Medium"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:fontFamily="@font/assistant"
+                android:id="@+id/Size_radioBtn2">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/light_blue"
+                android:layout_marginLeft="5dp"
+                android:text="Large"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:fontFamily="@font/assistant"
+                android:id="@+id/Size_radioBtn3">
+
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:outlineProvider="background"
+        android:backgroundTint="#DBDFE1"
+        android:background="#CFD1D3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approximate Age"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/assistant"
+            android:layout_marginRight="10dp">
+
+        </TextView>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:id="@+id/Age_spinner1">
+
+        </Spinner>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Age_spinner2">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="other details of the pet"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:fontFamily="@font/assistant"
+        android:layout_marginTop="10dp">
+
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Put here the details"
+        android:gravity="center"
+        android:text="@={viewmodel.details}">
+
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Photos"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/assistant">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Details"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:fontFamily="@font/assistant"
+        android:layout_marginTop="10dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/email_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="17dp"
+        android:fontFamily="@font/assistant"
+        android:text="@={viewmodel.Email}">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/Phone_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:textSize="17dp"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/assistant"
+        android:text="@={viewmodel.Phone}">
+    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I hereby agree to have read and understand the desclaimer"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/assistant">
+
+        </CheckBox>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/assistant"
+            android:text="CLOSE"
+            android:textColor="@color/white">
+
+        </Button>
+        <Button
+            android:id="@+id/Submit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:onClick="@{viewmodel::onSubmitClick}"
+            android:fontFamily="@font/assistant">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
